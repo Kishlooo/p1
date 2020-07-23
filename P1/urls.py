@@ -26,5 +26,10 @@ urlpatterns = [
     path('html_demo2',views.html_demo2,name="html_demo2"),
     path('third/',views.third,name="third"),
     path('fourth/',views.fourth,name="fourth"),
-    path('fifth/',views.fifth,name="fifth")
+    path('fifth/',views.fifth,name="fifth"),
+    path("url_data/<name>",views.urls_data,name="urls_data"),
+    #path("ab/<ab>",views.ab,name="ab"),
+    path("ab/<a>/<b>",views.ab,name="ab"),
+    path('greater/<c>/<d>/<e>',views.greater,name="greater"),
+    path('strin/<srt>',views.strin,name="strin"),
 ]

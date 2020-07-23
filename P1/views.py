@@ -21,3 +21,38 @@ def fourth(request):
 
 def fifth(request):
     return render(request,"fifth.html",{'a':10,'b':5})
+
+def urls_data(request,name):
+    return HttpResponse("<h1>{}</1>".format(name))
+
+#def ab(request,ab):
+   # a=ab.split(".")
+    #sum=int(a[0]) + int(a[1])
+    #return HttpResponse(str(sum))
+
+def ab(request,a,b):
+    sum=int(a)+int(b)
+    return HttpResponse(str(sum))
+
+def greater(request,c,d,e):
+    if(c>d):
+        if(c>e):
+            return HttpResponse(c)
+        else:
+            return HttpResponse(e)
+    else:
+        if(d>e):
+            return HttpResponse(d)
+        else:
+            return HttpResponse(e)
+
+def strin(request,srt):
+    o="aeiouAEIOU"
+    vow=""
+    const=""
+    for i in srt:
+        if i in o:
+            vow+=i;
+        else:
+            const+=i;
+    return render(request,"html/vowels.html",{'string':srt,'vowels':vow,'const':const})
